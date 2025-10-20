@@ -4,7 +4,7 @@ const router = express.Router();
 
 /**
  * @swagger
-* /score:
+ * /score:
  *   post:
  *     summary: Calculate score based on CPF
  *     description: This endpoint calculates the score based on the provided CPF.
@@ -17,9 +17,8 @@ const router = express.Router();
  *             properties:
  *               cpf:
  *                 type: string
- *                 pattern: "^[0-9]{11}$"  # Garante que o CPF tenha exatamente 11 dígitos
  *                 description: CPF number to calculate the score
- *                 example: "12345678901"  # Exemplo de CPF
+ *                 example: "12345678901"
  *     responses:
  *       200:
  *         description: Score calculated successfully
@@ -33,7 +32,7 @@ const router = express.Router();
  *                   example: "12345678901"
  *                 score:
  *                   type: integer
- *                   example: 75
+ *                   example: 750
  *       400:
  *         description: Invalid CPF format
  */

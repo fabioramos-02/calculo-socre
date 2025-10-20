@@ -1,4 +1,4 @@
-const scoreService = require("../services/scoreService").default;
+const scoreService = require("../services/scoreService");
 
 // Função para validar o CPF
 const validarCPF = (cpf) => {

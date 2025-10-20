@@ -2,7 +2,7 @@ const swaggerJsDoc = require("swagger-jsdoc");
 
 const swaggerOptions = {
   definition: {
-    openapi: "3.0.0",
+    openapi: "3.0.0", // Definindo a versão do OpenAPI
     info: {
       title: "API de Cálculo de Score",
       version: "1.0.0",
