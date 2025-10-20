@@ -5,7 +5,7 @@ const router = express.Router();
 
 /**
  * @swagger
- * /score:
+ * /api/score:
  *   get:
  *     summary: Calcular score baseado no CPF
  *     description: Este endpoint calcula o score com base no CPF fornecido.
