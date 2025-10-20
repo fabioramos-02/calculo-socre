@@ -5,6 +5,9 @@ const swaggerDocs = require("./swagger/swaggerDoc");
 const app = express();
 
 app.use(express.json()); // Para tratar requisições com corpo em JSON
+app.get("/", (req, res) => {
+    res.redirect("/api-docs");
+});
 
 // Rota para a documentação Swagger
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));

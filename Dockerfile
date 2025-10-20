@@ -1,5 +1,5 @@
 # Etapa 1: Definir a imagem base
-FROM node:16-alpine
+FROM node:16
 
 # Etapa 2: Definir o diretório de trabalho dentro do container
 WORKDIR /usr/src/app

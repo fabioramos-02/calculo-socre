@@ -4,9 +4,10 @@ const router = express.Router();
 
 /**
  * @swagger
- * /score:
+* /score:
  *   post:
- *     summary: Calcula o score fictício baseado no CPF
+ *     summary: Calculate score based on CPF
+ *     description: This endpoint calculates the score based on the provided CPF.
  *     requestBody:
  *       required: true
  *       content:
@@ -16,11 +17,12 @@ const router = express.Router();
  *             properties:
  *               cpf:
  *                 type: string
- *                 description: CPF do usuário
- *                 example: "12345678901"
+ *                 pattern: "^[0-9]{11}$"  # Garante que o CPF tenha exatamente 11 dígitos
+ *                 description: CPF number to calculate the score
+ *                 example: "12345678901"  # Exemplo de CPF
  *     responses:
  *       200:
- *         description: Score calculado com sucesso
+ *         description: Score calculated successfully
  *         content:
  *           application/json:
  *             schema:
@@ -28,11 +30,12 @@ const router = express.Router();
  *               properties:
  *                 cpf:
  *                   type: string
+ *                   example: "12345678901"
  *                 score:
  *                   type: integer
  *                   example: 75
  *       400:
- *         description: CPF não fornecido
+ *         description: Invalid CPF format
  */
 router.post("/", scoreController.getScore);
 
