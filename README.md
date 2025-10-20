@@ -54,7 +54,7 @@ https://calculo-socre.onrender.com/api-docs
 
 ## API
 
-### POST /score
+### POST api/score
 
 **Descrição:** Calcula o score fictício baseado no CPF.
 
