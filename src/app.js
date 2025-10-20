@@ -6,11 +6,11 @@ const app = express();
 
 app.use(express.json()); // Para tratar requisições com corpo em JSON
 app.get("/", (req, res) => {
-    res.redirect("/api-docs");
+    res.redirect("/docs");
 });
 
 // Rota para a documentação Swagger
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 // Definir as rotas (vamos adicionar depois)
 const scoreRoutes = require("./routes/scoreRoutes");
