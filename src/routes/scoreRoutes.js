@@ -5,7 +5,7 @@ const router = express.Router();
 /**
  * @swagger
  * /score:
- *   post:
+ *   get:
  *     summary: Calcular score baseado no CPF
  *     description: Este endpoint calcula o score com base no CPF fornecido.
  *     operationId: calcularScore
@@ -35,6 +35,6 @@ const router = express.Router();
  *       400:
  *         description: Formato de CPF inválido
  */
-router.post("/", scoreController.getScore);
+router.get("/", scoreController.getScore);
 
 module.exports = router;
