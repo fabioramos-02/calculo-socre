@@ -1,15 +1,15 @@
 /**
- * Validates a Brazilian CPF (Cadastro de Pessoas Físicas) number.
+ * Valida um CPF (Cadastro de Pessoas Físicas) brasileiro.
  *
- * The CPF is a unique identifier for Brazilian citizens and consists of 11 digits.
- * This function checks if the provided CPF is valid by:
- * 1. Removing any non-digit characters.
- * 2. Ensuring the length is exactly 11 digits.
- * 3. Checking for sequences of the same digit (e.g., 111.111.111-11).
- * 4. Calculating and validating the two check digits based on the first nine digits.
+ * O CPF é um identificador único para cidadãos brasileiros e consiste em 11 dígitos.
+ * Esta função verifica se o CPF fornecido é válido:
+ * 1. Removendo quaisquer caracteres que não sejam dígitos.
+ * 2. Garantindo que o comprimento seja exatamente 11 dígitos.
+ * 3. Verificando sequências do mesmo dígito (por exemplo, 111.111.111-11).
+ * 4. Calculando e validando os dois dígitos verificadores com base nos primeiros nove dígitos.
  *
- * @param {string} cpf - The CPF number to be validated.
- * @returns {boolean} - Returns true if the CPF is valid, false otherwise.
+ * @param {string} cpf - O número do CPF a ser validado.
+ * @returns {boolean} - Retorna verdadeiro se o CPF for válido, falso caso contrário.
  */
 // src/utils/cpfValidator.js
 
