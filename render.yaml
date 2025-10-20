@@ -1,9 +1,12 @@
+# Exported from Render on 2025-10-20T14:46:06Z
+version: "1"
 services:
   - type: web
     name: calculo-score-api
+    plan: free
+    region: oregon
     runtime: docker
     buildCommand: docker build -t calculo-score .
-    branch: main
     envVars:
       - key: NODE_ENV
         value: production
