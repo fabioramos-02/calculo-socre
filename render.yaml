@@ -3,7 +3,6 @@ services:
     name: calculo-score-api
     runtime: docker
     buildCommand: docker build -t calculo-score .
-    startCommand: docker run -p 3000:3000 calculo-score
     branch: main
     envVars:
       - key: NODE_ENV
