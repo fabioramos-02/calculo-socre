@@ -27,7 +27,7 @@ const validarCPF = (cpf) => {
 };
 
 const getScore = (req, res) => {
-  const { cpf } = req.body;
+  const { cpf } = req.query; // Alterado de req.body para req.query
 
   // Verifica se o CPF foi fornecido
   if (!cpf) {
@@ -44,5 +44,4 @@ const getScore = (req, res) => {
 
   return res.json({ cpf, score });
 };
-
 module.exports = { getScore };
