@@ -10,6 +10,8 @@ const router = express.Router();
  *     summary: Calcular score baseado no CPF
  *     description: Este endpoint calcula o score com base no CPF fornecido.
  *     operationId: calcularScore
+ *     tags:
+ *       - Score
  *     parameters:
  *       - name: cpf
  *         in: query
