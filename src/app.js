@@ -17,8 +17,22 @@ app.get("/swagger.json", (req, res) => {
   res.send(swaggerDocs);
 });
 
+// Configuração do Swagger UI com CDN customizado
+const swaggerOptions = {
+  customCss: '.swagger-ui .topbar { display: none }',
+  customSiteTitle: "API de Cálculo de Score",
+  customCssUrl: 'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.15.5/swagger-ui.min.css',
+  customJs: [
+    'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.15.5/swagger-ui-bundle.min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.15.5/swagger-ui-standalone-preset.min.js'
+  ],
+  swaggerOptions: {
+    url: '/swagger.json',
+  }
+};
+
 // Rota para a documentação Swagger
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs, swaggerOptions));
 
 // Definir as rotas
 const scoreRoutes = require("./routes/scoreRoutes");
