@@ -1,5 +1,4 @@
 const swaggerJsDoc = require("swagger-jsdoc");
-const swaggerUi = require("swagger-ui-express");
 
 const swaggerOptions = {
   definition: {
@@ -23,8 +22,4 @@ const swaggerOptions = {
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
 
-const options = {
-  customCss: ".swagger-ui .topbar { display: none }",
-};
-
-module.exports = swaggerUi.setup(swaggerDocs, options);
+module.exports = swaggerDocs;

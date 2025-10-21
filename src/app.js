@@ -17,9 +17,8 @@ app.get("/swagger.json", (req, res) => {
   res.send(swaggerDocs);
 });
 
-
-
-app.use("/api-docs", swaggerUi.serve, swaggerDocs);
+// Rota para a documentação Swagger
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 // Definir as rotas
 const scoreRoutes = require("./routes/scoreRoutes");

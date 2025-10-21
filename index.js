@@ -1,4 +1,4 @@
-
+// index.js (Arquivo de entrada para Vercel e local)
 const app = require('./src/app');
 
 // Exportar para Vercel (serverless)
