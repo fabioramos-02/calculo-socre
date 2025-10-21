@@ -9,8 +9,14 @@ const swaggerOptions = {
       description:
         "API para calcular a pontuação fictícia de score com base no CPF",
     },
+    servers: [
+      {
+        url: "/",
+        description: "Servidor principal",
+      },
+    ],
   },
-  apis: ["./src/routes/*.js"], // Onde o Swagger vai procurar as rotas
+  apis: ["./src/routes/*.js", "./src/routes/**/*.js"], // Onde o Swagger vai procurar as rotas
 };
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
