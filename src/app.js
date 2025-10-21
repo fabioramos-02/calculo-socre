@@ -8,7 +8,7 @@ app.use(express.json()); // Para tratar requisições com corpo em JSON
 
 // Redirecionar para a documentação Swagger
 app.get("/", (req, res) => {
-  res.redirect("/docs");
+  res.redirect("/api-docs");
 });
 
 // Servir o JSON do Swagger
@@ -17,13 +17,9 @@ app.get("/swagger.json", (req, res) => {
   res.send(swaggerDocs);
 });
 
-// Rota para a documentação Swagger - configuração simplificada para Vercel
-const swaggerOptions = {
-  customCss: ".swagger-ui .topbar { display: none }",
-  customSiteTitle: "API de Cálculo de Score",
-};
 
-app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs, swaggerOptions));
+
+app.use("/api-docs", swaggerUi.serve, swaggerDocs);
 
 // Definir as rotas
 const scoreRoutes = require("./routes/scoreRoutes");

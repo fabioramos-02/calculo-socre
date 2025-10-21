@@ -1,5 +1,5 @@
 const swaggerJsDoc = require("swagger-jsdoc");
-const path = require("path");
+const swaggerUi = require("swagger-ui-express");
 
 const swaggerOptions = {
   definition: {
@@ -18,12 +18,13 @@ const swaggerOptions = {
     ],
   },
   // Caminhos absolutos para garantir que funcione na Vercel
-  apis: [
-    path.join(__dirname, "../routes/*.js"),
-    path.join(__dirname, "../routes/**/*.js")
-  ],
+  apis: ["./src/routes/*.js"],
 };
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
 
-module.exports = swaggerDocs;
+const options = {
+  customCss: ".swagger-ui .topbar { display: none }",
+};
+
+module.exports = swaggerUi.setup(swaggerDocs, options);
