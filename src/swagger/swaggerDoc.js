@@ -1,4 +1,5 @@
 const swaggerJsDoc = require("swagger-jsdoc");
+const path = require("path");
 
 const swaggerOptions = {
   definition: {
@@ -16,7 +17,11 @@ const swaggerOptions = {
       },
     ],
   },
-  apis: ["./src/routes/*.js", "./src/routes/**/*.js"], // Onde o Swagger vai procurar as rotas
+  // Caminhos absolutos para garantir que funcione na Vercel
+  apis: [
+    path.join(__dirname, "../routes/*.js"),
+    path.join(__dirname, "../routes/**/*.js")
+  ],
 };
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);

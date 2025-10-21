@@ -23,8 +23,7 @@ const swaggerOptions = {
   customSiteTitle: "API de Cálculo de Score",
 };
 
-app.get("/docs", swaggerUi.setup(swaggerDocs, swaggerOptions));
-app.use("/docs", swaggerUi.serve);
+app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs, swaggerOptions));
 
 // Definir as rotas
 const scoreRoutes = require("./routes/scoreRoutes");
