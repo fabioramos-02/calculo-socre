@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 3000
 
 # Etapa 7: Comando para rodar a aplicação quando o container for iniciado
-CMD ["node", "src/app.js"]
+CMD ["node", "index.js"]
