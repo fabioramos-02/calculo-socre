@@ -1,9 +1,15 @@
 {
   "version": 2,
-  "rewrites": [
+  "buildCommand": "npm run build",
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "{dist/openapi.yaml,node_modules/swagger-ui-dist/**}"
+    }
+  },
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/api"
+      "src": "/(.*)",
+      "dest": "api/index.js"
     }
   ]
 }
