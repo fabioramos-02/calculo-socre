@@ -2,7 +2,7 @@
 const { calcularScore } = require('../src/services/scoreService');
 
 describe('scoreService - calcularScore', () => {
-  it('deve retornar um número inteiro entre 100 e 1000 para CPF válido', () => {
+  it('Deve retornar um número inteiro entre 100 e 1000 para CPF válido', () => {
     const result = calcularScore('12345678901');
     expect(typeof result).toBe('number');
     expect(Number.isInteger(result)).toBe(true);
@@ -10,7 +10,7 @@ describe('scoreService - calcularScore', () => {
     expect(result).toBeLessThanOrEqual(1000);
   });
 
-  it('não deve lançar exceção para entradas inválidas e deve retornar valor no intervalo', () => {
+  it('Não deve lançar exceção para entradas inválidas e deve retornar valor no intervalo', () => {
     expect(() => calcularScore(null)).not.toThrow();
     expect(() => calcularScore(undefined)).not.toThrow();
     expect(() => calcularScore('abc')).not.toThrow();
