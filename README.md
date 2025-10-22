@@ -42,14 +42,14 @@ A aplicação estará disponível em `http://localhost:3000`.
 
 ## Produção
 
-A aplicação **Cálculo Score API** está agora publicada e em funcionamento no **Render.com**. Você pode acessar a aplicação a partir do seguinte endereço:
+A aplicação **Cálculo Score API** está agora publicada e em funcionamento na **Vercel.com**. Você pode acessar a aplicação a partir do seguinte endereço:
 
-**URL de Produção:** [https://calculo-socre.onrender.com](https://calculo-socre.onrender.com)
+**URL de Produção:** [https://calculo-socre.vercel.app/](https://calculo-socre.vercel.app/)
 
 A documentação Swagger também está disponível em produção:
 
 ```
-https://calculo-socre.onrender.com/api-docs
+https://calculo-socre.vercel.app/
 ```
 
 ## API
