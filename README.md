@@ -44,12 +44,12 @@ A aplicação estará disponível em `http://localhost:3000`.
 
 A aplicação **Cálculo Score API** está agora publicada e em funcionamento na **Vercel.com**. Você pode acessar a aplicação a partir do seguinte endereço:
 
-**URL de Produção:** [https://calculo-socre.vercel.app/](https://calculo-socre.vercel.app/)
+**URL de Produção:** [https://calculo-score.vercel.app/](https://calculo-score.vercel.app/)
 
 A documentação Swagger também está disponível em produção:
 
 ```
-https://calculo-socre.vercel.app/
+https://calculo-score.vercel.app/
 ```
 
 ## API

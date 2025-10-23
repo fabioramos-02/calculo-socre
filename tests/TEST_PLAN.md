@@ -2,7 +2,7 @@
 
 Contexto
 --------
-Projeto: calculo-socre
+Projeto: calculo-score
 Componente alvo: `src/services/scoreService.js` (função `calcularScore`)
 Objetivo: Validar o comportamento do microserviço de cálculo de score de forma simples, objetiva e seguindo boas práticas de Validação e Verificação de Software.
 
